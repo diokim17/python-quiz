@@ -28,6 +28,11 @@ print(python[0].isupper()) # python에 있는 변수의 첫번째 값이 대문�
 print(len(python)) # python 전체 문자열의 길이
 print(python.replace("Python", "Java")) # python에 있는 변수 중 Python이라는 문자를 찾아서 Java로 바꾸어 출력
 
+# index: 배열에서 값의 위치를 찾아주는 함수, 중복된 값이 있으면 가장 최소의 위치를 리턴
+# index(value, start, end)
+# a = "423456" 일 때,
+# a 문자열에서 4의 위치 찾기: print(a.index("4"))
+# a 문자열 중 3번째 자리부터 마지막 자리까지에서 4의 위치 찾기: ptrint(a.index("4",2,5))
 index = python.index("n") # python에 있는 변수 중 n이라는 문자가 어디에 있는지 알려줌
 print(index)
 index = python.index("n", index + 1) # n이 있는 자리 5에서 1을 더한 6번째 자리부터 또 n이 나오는 위치 찾기 즉, 두번째 n찾기
