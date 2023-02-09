@@ -20,7 +20,7 @@ print(5>10)
 print(5<10)
 print(True)
 print(False)
-print(not True)
+print(not True) # not은 뒤에 것의 반대를 의미 따라서 False
 print(not False)
 print(not (5>10))
 
@@ -38,7 +38,7 @@ avgage = 15
 is_adult = age >= 7
 
 '''
-배우기 전 나의 코딩
+수정 전
 print("우리집" animal "의 이름은" name"이에요")
 print(name"는" age"살이며," animal "평균 수명은" avgage"살이에요")
 print("그럼" name"는" is_adult"?")
