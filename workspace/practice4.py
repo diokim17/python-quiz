@@ -99,7 +99,93 @@ locker.clear()
 print(locker) # 결과: {} {}만 출력
 
 # 튜플
+# 리스트와는 다르게 변경이나 추가 불가능 따라서 변경되지 않는 목록을 사용할 때 사용
+# 대신에 리스트 보다는 속도가 빠름
+menu = ("fanta", "coke")
+print(menu[0])
+print(menu[1])
 
-# 세트
+# 활용
+# name = "apple"
+# color = "red"
+# kind = "fruit"
+# print(name, color, kind)
+
+name, color, kind = "apple", "red", "fruit"
+print(name, color, kind) # 113번과 동일한 결과 값
+
+# 세트(set), 집합
+# 중복 x, 순서 x
+my_set = {1, 2, 3, 3, 3} # {}는 위에 사전(55번 줄)에서도 사용 -> key, value를 사용, set에서는 값만 나열하면 됨
+print(my_set) # 중복x 따라서 {1, 2, 3} 출력
+
+pro_java = {"harry", "ron", "hermione"}
+pro_python = set(["voldmote", "harry"])
+# 교집합 (java, python 모두 할 수 있는 자)
+print(pro_java & pro_python) # {'harry'} 출력
+print(pro_java.intersection(pro_python)) # 동일하게 교집합인 {'harry'} 출력, intersection = 교집합
+print(pro_python.intersection(pro_java)) # 125번과 동일하게 출력
+
+# fruit_red = {"apple", "tomato", "cherry"}
+# fruit_green = {"apple", "melon"}
+# print(fruit_red & fruit_green) # {'apple'} 출력 위의 코드처럼(122~125) 교집합 출력
+
+# 합집합 (java, python 할 수 있는 자)
+print(pro_java | pro_python) # 중복x 따라서 {'hermione', 'voldmote', 'harry', 'ron'} harry는 중복이므로 한번만 출력, 또한 순서x 따라서 내가 적은 코드 순서와 무관하게 출력
+print(pro_java.union(pro_python)) # 133번과 동일하게 출력, union = 합집합
+print(pro_python.union(pro_java)) # 133번과 동일하게 출력
+
+# 차집합 (java 가능한자, python 불가능한자)
+print(pro_java - pro_python) # {'hermione', 'ron'} 출력
+print(pro_java.difference(pro_python)) # 139번과 동일하게 출력
+
+# python 할 수 있는자 추가
+pro_python.add("ron")
+print(pro_python) # {'voldmote', 'harry', 'ron'} 출력, 튜플과 다르게 추가 가능함
+
+print(pro_java.intersection(pro_python)) # 교집합, 따라서 {'ron', 'harry'} 출력
+
+# java 까먹은자
+pro_java.remove("ron")
+print(pro_java) # {'harry', 'hermione'} 출력, 제거도 가능함
+
+
 # 자료구조의 변경
+# 커피숍이라면
+drink = {"latte", "americano", "juice"}
+print(drink, type(drink)) # class 'set'으로 출력, {}로 문자 감싸져 있음, class는 practice8 참고
+
+drink = list(drink)
+print(drink, type(drink)) # class 'list'로 출력, []로 문자 감싸져 있음
+
+drink = tuple(drink)
+print(drink, type(drink)) # class 'tuple'로 출력, ()로 문자 감싸져 있음
+
+drink = set(drink)
+print(drink, type(drink)) # class 'set'으로 출력, {}로 문자 감싸져 있음
+
 # Quiz
+# 당신의 학교에서는 파이썬 코딩 대회를 주최합니다.
+# 참석률을 높이기 위해 댓글 이벤트를 진행하기로 했습니다.
+# 댓글 작성자들 중에 추첨을 통해 1명은 치킨, 3명은 커피 쿠폰을 받게 됩니다.
+# 추첨 프로그램을 작성하시오.
+
+# 조건 1: 편의상 댓글은 20명이 작성하였고, 아이디는 1 ~ 20 이라고 가정
+# 조건 2: 댓글 내용과 상관없이 무작위로 추첨하되 중복 불가
+# 조건 3: random 모듈의 shuffle과 sample을 활용
+
+# 출력 예제
+# -- 당첨자 발표 --
+# 치킨 당첨자 : 1
+# 커피 당첨자 : [2, 3, 4]
+# -- 축하합니다 --
+
+# 활용 예제
+# from random import *
+# lst = [1, 2, 3, 4, 5]
+# print(lst)
+# shuffle(lst)
+# print(lst)
+# print(sample(lst, 1))
+
+
