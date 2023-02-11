@@ -189,3 +189,4 @@ print(drink, type(drink)) # class 'set'으로 출력, {}로 문자 감싸져 있
 # print(sample(lst, 1))
 
 
+
