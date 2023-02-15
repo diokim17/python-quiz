@@ -12,7 +12,7 @@ print(subway)
 
 # 활용
 # Herry가 몇번 째 칸에 있는가
-print(subway.index("Herry")) # 1
+print(subway.index("Herry")) # 0
 
 # 다음 정류장에서 다음 칸에 "Bill" 탑승
 subway.append("Bill") # append: 뒤에 더하다 따라서 맨 뒤에 붙음
@@ -188,5 +188,36 @@ print(drink, type(drink)) # class 'set'으로 출력, {}로 문자 감싸져 있
 # print(lst)
 # print(sample(lst, 1))
 
+'''
+내가 짠 코드
 
+from random import *
+list_comment = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+shuffle(list_comment)
+print(list_comment)
+chicken = sample(list_comment,1)
+coffee = sample(list_comment,3)
+print("-- 당첨자 발표 --")
+print("치킨 당첨자: ", chicken)
+print("커피 당첨자: ", coffee)
+print("-- 축하합니다 --")
 
+'''
+
+# 정답
+
+from random import *
+users = range(1, 21) # 1 부터 20까지 숫자 생성
+# print(type(users)) # type이 list가 아니라서 list 함수 활용 불가 
+users = list(users)
+# print(type(users))
+
+print(users)
+shuffle(users)
+print(users)
+
+winners = sample(users,4) # 4명 중에서 1명은 치킨, 3명은 커피
+print("-- 당첨자 발표 --")
+print("치킨 당첨자 : {0}".format(winners[0]))
+print("커피 당첨자 : {0}".format(winners[1:]))
+print("-- 축하합니다 --")
