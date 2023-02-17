@@ -21,6 +21,7 @@ for student in range(1, 11): # 1번부터 10번까지 있다고 가정
         continue # continue를 만나면 continue 기준으로 아래 문장 실행x, 다음 번호 반복
     elif student in no_book:
         print("{0}번은 뒤로 나가고 쉬는 시간에 교무실로 따라 오도록".format(student))
+        continue
     elif student in noise:
         print("오늘 수업은 여기까지 하고, {0}번은 따라와".format(student))
         break # break와 동시에 더이상 진행x, 반복문 탈출
