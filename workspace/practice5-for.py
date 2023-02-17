@@ -8,3 +8,24 @@ starbucks = ["harry", "ron", "albus"]
 for customer in starbucks:
     print("{0}님 커피가 나왔습니다.".format(customer))
 
+# 한줄 for문
+# 상황
+# 출석번호 1번, 2번,...이 있었는데, 100번부터 시작으로 변경 -> 101, 102,.. 이런식
+students = [1, 2, 3, 4, 5]
+print(students)
+students = [i+100 for i in students]
+print(students)
+
+# 또 다른 예제
+# 학생 이름을 길이로 변환
+students = ["harry", "voldmote", "malfoy"] # 현재 이름은 문자열 이 문자열을 길이 즉, harry는 5글자 이므로 5 이렇게 변경
+students = [len(i) for i in students] # len: 어떤 문자열의 값이나 길이를 의미
+print(students)
+
+# 또 다른 예제
+# 학생 이름을 대문자로 변환
+students = ["harry", "voldmote", "malfoy"]
+students = [i.upper() for i in students]
+print(students)
+
+# ()안에 변수를 넣는지, 변수.을 하는 건지 구분!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
